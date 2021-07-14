@@ -79,61 +79,6 @@ p {
 	transform: translateY(40px) scale(1.3);
 }
 
-
-/********************************
-       all players styles
-********************************/
-
-.players {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 30px;
-	grid-row-gap: 30px;
-	margin-top: 70px;
-}
-
-.single-player {
-	background: #FFFFFF;
-	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-	width: 315px;
-	padding: 15px 15px 26px;
-}
-
-.single-player .player-thumbnail img {
-	width: 315px;
-	height: 256px;
-}
-
-.player-title {
-	color: #18191F;
-	font-size: 28px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-
-/********************************
-       highligts-area styles
-********************************/
-
-.highligts-area {
-	display: flex;
-	align-items: center;
-	padding-top: 120px;
-}
-
-.highlights-info {
-	padding-right: 60px;
-}
-
-.highligts-area .hilights-thumbnail img {
-	width: 540px;
-}
-
-.highlights-info h2 {
-	font-size: 46px;
-}
-
 .default-button {
 	margin-top: 18px;
 	background: #E02C6D;
@@ -173,6 +118,40 @@ p {
 .default-button i {
 	margin-left: 10px;
 }
+
+
+/********************************
+       all players styles
+********************************/
+
+.players {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	margin-top: 70px;
+}
+
+.single-player {
+	background: #FFFFFF;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+	width: 315px;
+	padding: 15px 15px 26px;
+}
+
+.single-player .player-thumbnail img {
+	width: 315px;
+	height: 256px;
+}
+
+.player-title {
+	color: #18191F;
+	font-size: 28px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
 
 
 /*********************************
@@ -314,17 +293,6 @@ footer {
 /* tablet device resposive */
 
 
-/* @media only screen and (min-width: 993px) and (max-width: 1160px) {
-    .single-player {
-        width: 285px; 
-    }
-    .single-player .player-thumbnail img {
-        width: 285px;
-        height: auto;
-    }
- }
-  */
-
 @media only screen and (min-width: 668px) and (max-width: 992px) {
 	.container {
 		width: 100%;
@@ -343,7 +311,6 @@ footer {
 		transition: .4s;
 	}
 	.single-player {
-		;
 		width: 280px;
 	}
 	.single-player .player-thumbnail img {
@@ -355,15 +322,6 @@ footer {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 30px;
 		grid-column-gap: 30px;
-	}
-	.highligts-area .hilights-thumbnail img {
-		width: 300px;
-	}
-	.highlights-info {
-		padding-right: 25px;
-	}
-	.highlights-info h2 {
-		font-size: 30px;
 	}
 	.discution-title {
 		width: 100%;
@@ -402,18 +360,7 @@ footer {
 	.single-player {
 		width: 265px;
 	}
-	.highligts-area {
-		display: flex;
-		align-items: center;
-		padding-top: 120px;
-		flex-direction: column;
-	}
-	.highlights-info h2 {
-		font-size: 30px;
-	}
-	.highlights-info {
-		padding-right: 0px;
-	}
+	
 	.discution-boxes,
 	.blogs {
 		grid-template-columns: repeat(1, 1fr);
@@ -422,7 +369,5 @@ footer {
 	.discution-title {
 		width: 97%;
 	}
-	.highligts-area .hilights-thumbnail img {
-		width: 320px;
-	}
+	
 }
