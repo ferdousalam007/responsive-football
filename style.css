@@ -31,14 +31,41 @@ p{
     margin: 0;
     line-height: 26px;
 }
+/*********************************
+    banner-area styles
+**********************************/
+.banner{
+    padding: 150px 100px;
+    background-color: #2D25A0;
+    width: 100%;
+}
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.banner-heading h1 {
+    font-size: 61px;
+    color: #fff;
+    margin: 0;
+}
+.banner-content .banner-image img{
+    width: 556px;
+    height: 438px;
+    transition: .4s;
+}
+.banner:hover .banner-image img{
+    transform: translateY(40px) scale(1.3);
+}
 /********************************
        all players styles
 ********************************/
-.players{
+.players {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 70px;
 }
 .single-player{
     background: #FFFFFF;
@@ -73,13 +100,36 @@ p{
 .highlights-info h2{
     font-size: 46px;
 }
-.default-button{
-    margin-top: 24px;
+.default-button {
+    margin-top: 18px;
     background: #E02C6D;
     padding: 10px 24px;
     color: #fff;
-    display: inline-block;text-decoration: none;
-    align-items: center;
+    display: inline-block;
+    text-decoration: none;position: relative;
+    transition: .4s;
+    overflow: hidden;
+    z-index: 1;
+}
+.default-button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: .4s;
+}
+.default-button:hover::before{
+    transform: translateX(0);
+}
+.default-button:hover{
+    color: #6C6C6C;
+    border: 2px solid #E02C6D;
+    border-radius: 5px;
 }
 .default-button i{
     margin-left: 10px;
@@ -93,7 +143,11 @@ p{
 .discution-title {
     text-align: center;
     width: 75%;
-    margin: 0 auto;
+    margin: 0px auto 40px;
+}
+.discution-title h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 .discution-boxes{
     display: grid;
@@ -111,9 +165,9 @@ p{
 .discution-info {
     background: #2d25a0b5;
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
-    padding: 0px 15px;
+    padding: 12px 15px 0;
     color: #fff;
 }
 .author p {
@@ -129,9 +183,6 @@ p{
     margin: 0;
     padding: 0px 0px 10;
     padding: 5px 0px 10px;
-}
-.discution-date p {
-    font-size: 14px;
 }
 /*********************************
     blogs-area styles
