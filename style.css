@@ -35,7 +35,7 @@ p{
     banner-area styles
 **********************************/
 .banner{
-    padding: 150px 100px;
+    padding: 150px 0px 100px 0px;
     background-color: #2D25A0;
     width: 100%;
 }
@@ -64,14 +64,15 @@ p{
 .players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     margin-top: 70px;
 }
-.single-player{
+.single-player {
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-    padding: 15px 15px 26px 15px;
-    width: 300px;
+    padding: 15px 0px 26px 15px;
+    /* width: 300px; */
 }
 .single-player .player-thumbnail img{
     width: 300px;
@@ -147,7 +148,9 @@ p{
 }
 .discution-title h3 {
     font-size: 35px;
+    margin: 0;
     margin-bottom: 20px;
+    
 }
 .discution-boxes{
     display: grid;
@@ -156,19 +159,17 @@ p{
     
 }
 .discution-single-box {
-    position: relative;
     box-shadow: 5px 5px 15px -9px #000;
-}
+} 
+
 .article-thumbnail img{
-    width: 330px;
+    width: 100%;
 }
 .discution-info {
-    background: #2d25a0b5;
-    position: absolute;
-    bottom: 7px;
-    left: 0;
+    background: #2d25a0;;
     padding: 12px 15px 0;
     color: #fff;
+    margin-top: -15px;
 }
 .author p {
     font-size: 14px;
@@ -212,4 +213,87 @@ p{
 }
 h3.blog-title {
     margin: 0;
+}
+/*********************************
+    footer-area styles
+**********************************/
+footer{
+    padding: 120px 0 60px 0;
+}
+.footer-area{
+    text-align: center;
+}
+.footer-thumbnail img{
+    width: 426px;
+    margin-bottom: 40px;
+}
+.footer-social-links i{
+    color: #969BAB;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    background: #E7E7E8;
+    margin-right: 15px;
+
+}
+.copyright-text{
+    margin-top: 30px;
+    color: #000000;
+    font-size: 18px;
+}
+/*------------------
+ media queries 
+ -------------------*/
+ /* tablet device resposive */
+ @media only screen and (min-width: 668px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+        section.banner {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .banner-heading h1 {
+        font-size: 45px;
+    }
+    .banner-content .banner-image img {
+        width: 244px;
+        height: auto;
+        transition: .4s;
+    }
+    .players,.discution-boxes {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
+    }
+    .highligts-area .hilights-thumbnail img {
+        width: 300px;
+    }
+    .highlights-info {
+        padding-right: 25px;
+    }
+    .highlights-info h2 {
+        font-size: 30px;
+    }
+    .discution-title {
+        width: 100%;
+    }
+}
+/* mobile device resposive */
+@media only screen and (max-width: 668px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .discution-boxes , .blogs {
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 30px;
+    }
+    /* .discution-title {
+        width: 100%;
+    } */
+    
 }
