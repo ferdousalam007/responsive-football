@@ -76,7 +76,7 @@ p {
 }
 
 .banner:hover .banner-image img {
-	transform: translateY(40px) scale(1.3);
+	transform: translateY(90px) scale(1.2);
 }
 
 .default-button {
