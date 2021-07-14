@@ -12,13 +12,13 @@ body {
    font-family: 'Poppins', sans-serif;
    box-sizing: border-box;
 }
-main {
+ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
+} 
 .container{
-    width: 1050px;
+    width: 1080px;
 
 }
 h1,h2,h3,h4,h5,h6{
@@ -42,7 +42,6 @@ p{
 .banner-content {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     margin: 0 auto;
 }
 .banner-heading h1 {
@@ -71,11 +70,11 @@ p{
 .single-player {
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-    padding: 15px 0px 26px 15px;
-    /* width: 300px; */
+    width: 315px;
+    padding: 15px 15px 26px;
 }
 .single-player .player-thumbnail img{
-    width: 300px;
+    width: 315px;
     height: 256px;
 }
 .player-title{
@@ -188,8 +187,9 @@ p{
 /*********************************
     blogs-area styles
 **********************************/
-.latest-news{
-    margin-top: 100px;
+.latest-news {
+    margin: 0 auto;
+    padding-top: 30px;
 }
 .blogs{
     display: grid;
@@ -246,6 +246,16 @@ footer{
  media queries 
  -------------------*/
  /* tablet device resposive */
+ /* @media only screen and (min-width: 993px) and (max-width: 1160px) {
+    .single-player {
+        width: 285px; 
+    }
+    .single-player .player-thumbnail img {
+        width: 285px;
+        height: auto;
+    }
+ }
+  */
  @media only screen and (min-width: 668px) and (max-width: 992px) {
     .container {
         width: 100%;
@@ -262,6 +272,12 @@ footer{
         width: 244px;
         height: auto;
         transition: .4s;
+    }
+    .single-player {;
+        width: 280px;
+    }
+    .single-player .player-thumbnail img{
+        width: 280px;
     }
     .players,.discution-boxes {
         display: grid;
@@ -283,17 +299,29 @@ footer{
     }
 }
 /* mobile device resposive */
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 667px) {
     .container {
-        width: 100%;
+        width: 90%;
         padding: 0 15px;
+    }
+    .players {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .single-player .player-thumbnail img {
+        width: 265px;
+        height: auto;
+    }
+    .single-player{
+        width: 265px;
     }
     .discution-boxes , .blogs {
         grid-template-columns: repeat(1,1fr);
         grid-row-gap: 30px;
     }
-    /* .discution-title {
-        width: 100%;
-    } */
+    .discution-title {
+        width: 97%;
+    }
     
 }
